@@ -37,8 +37,11 @@ namespace Practice.WinformOrder.UI
 		{
 			listView1.Items.Clear();
 			listView1.View = View.Details;
-			var milkOrder = new Order(defaultGoods.pdMilk, (int)numUPmilk.Value,tbBuyer.Text);
-			var colaOrder = new Order(defaultGoods.pdCola, (int)numUPcola.Value,tbBuyer.Text);
+			listView2.Items.Clear();
+			listView2.View = View.Details;
+
+			var milkOrder = new Order(defaultGoods.pdMilk, (int)numUPmilk.Value, tbBuyer.Text);
+			var colaOrder = new Order(defaultGoods.pdCola, (int)numUPcola.Value, tbBuyer.Text);
 			var coffeeOrder = new Order(defaultGoods.pdCoffee, (int)numUPcoffee.Value, tbBuyer.Text);
 
 			orderlist.Add(milkOrder);
@@ -46,11 +49,9 @@ namespace Practice.WinformOrder.UI
 			orderlist.Add(coffeeOrder);
 
 			List<(string pName, int oQantity, int oPrice)> orderSummary = orderlist.GetOrderSummary();
-			string result = string.Empty;
 
 			foreach (var order in orderSummary)
 			{
-				result = result + order.ToString();
 				ListViewItem item = new ListViewItem(order.pName);
 				item.SubItems.Add(order.oQantity.ToString());
 				item.SubItems.Add($"{order.oPrice.ToString()} 元");
@@ -58,7 +59,26 @@ namespace Practice.WinformOrder.UI
 				ListViewItem[] items = new ListViewItem[] { item };
 				listView1.Items.AddRange(items);
 			}
-			textBox1.Text = result;
+
+			int orderTotalPrice = orderlist.GetOrderTotalPrice();
+			ListViewItem itemSum = new ListViewItem("合計");
+			itemSum.SubItems.Add(string.Empty);
+			itemSum.SubItems.Add($"{orderTotalPrice} 元");
+			ListViewItem[] itemSums = new ListViewItem[] { itemSum };
+			listView1.Items.AddRange(itemSums);
+
+			List<(string buyer, string summary, int price)> orderBuyerSummary = orderlist.GetOrderSummaryByBuyer();
+			foreach (var order in orderBuyerSummary)
+			{
+				ListViewItem item = new ListViewItem(order.buyer);
+				item.SubItems.Add(order.summary);
+				item.SubItems.Add($"{order.price.ToString()} 元");
+				// 將項目添加到 ListViewItems 集合中
+				ListViewItem[] items = new ListViewItem[] { item };
+				listView2.Items.AddRange(items);
+			}
+
+			tbBuyer.Text = string.Empty;
 			numUPmilk.Value = 0;
 			numUPcola.Value = 0;
 			numUPcoffee.Value = 0;

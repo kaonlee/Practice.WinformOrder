@@ -42,13 +42,16 @@
 			numUPcoffee = new NumericUpDown();
 			label5 = new Label();
 			lbCoffee = new Label();
-			textBox1 = new TextBox();
 			listView1 = new ListView();
 			columnName = new ColumnHeader();
 			columnQantity = new ColumnHeader();
 			columnPrice = new ColumnHeader();
 			label2 = new Label();
 			tbBuyer = new TextBox();
+			listView2 = new ListView();
+			columnBuyer = new ColumnHeader();
+			columnSummary = new ColumnHeader();
+			columnEachToatal = new ColumnHeader();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			((System.ComponentModel.ISupportInitialize)numUPcola).BeginInit();
 			((System.ComponentModel.ISupportInitialize)numUPmilk).BeginInit();
@@ -179,14 +182,6 @@
 			lbCoffee.TabIndex = 7;
 			lbCoffee.Text = ".";
 			// 
-			// textBox1
-			// 
-			textBox1.Location = new Point(331, 359);
-			textBox1.Multiline = true;
-			textBox1.Name = "textBox1";
-			textBox1.Size = new Size(226, 138);
-			textBox1.TabIndex = 10;
-			// 
 			// listView1
 			// 
 			listView1.Columns.AddRange(new ColumnHeader[] { columnName, columnQantity, columnPrice });
@@ -224,15 +219,36 @@
 			tbBuyer.Size = new Size(100, 23);
 			tbBuyer.TabIndex = 13;
 			// 
+			// listView2
+			// 
+			listView2.Columns.AddRange(new ColumnHeader[] { columnBuyer, columnSummary, columnEachToatal });
+			listView2.Location = new Point(319, 359);
+			listView2.Name = "listView2";
+			listView2.Size = new Size(242, 138);
+			listView2.TabIndex = 14;
+			listView2.UseCompatibleStateImageBehavior = false;
+			// 
+			// columnBuyer
+			// 
+			columnBuyer.Text = "Buyer";
+			// 
+			// columnSummary
+			// 
+			columnSummary.Text = "Summary";
+			// 
+			// columnEachToatal
+			// 
+			columnEachToatal.Text = "Payment";
+			// 
 			// Form1
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(607, 532);
+			Controls.Add(listView2);
 			Controls.Add(tbBuyer);
 			Controls.Add(label2);
 			Controls.Add(listView1);
-			Controls.Add(textBox1);
 			Controls.Add(lbCoffee);
 			Controls.Add(lbMilk);
 			Controls.Add(label5);
@@ -274,12 +290,15 @@
 		private NumericUpDown numUPcoffee;
 		private Label label5;
 		private Label lbCoffee;
-		private TextBox textBox1;
 		private ListView listView1;
 		private ColumnHeader columnName;
 		private ColumnHeader columnQantity;
 		private ColumnHeader columnPrice;
 		private Label label2;
 		private TextBox tbBuyer;
+		private ListView listView2;
+		private ColumnHeader columnBuyer;
+		private ColumnHeader columnSummary;
+		private ColumnHeader columnEachToatal;
 	}
 }
