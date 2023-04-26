@@ -47,6 +47,8 @@
 			columnName = new ColumnHeader();
 			columnQantity = new ColumnHeader();
 			columnPrice = new ColumnHeader();
+			label2 = new Label();
+			tbBuyer = new TextBox();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			((System.ComponentModel.ISupportInitialize)numUPcola).BeginInit();
 			((System.ComponentModel.ISupportInitialize)numUPmilk).BeginInit();
@@ -69,7 +71,7 @@
 			// pictureBox1
 			// 
 			pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-			pictureBox1.Location = new Point(42, 58);
+			pictureBox1.Location = new Point(319, 55);
 			pictureBox1.Name = "pictureBox1";
 			pictureBox1.Size = new Size(83, 102);
 			pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -78,7 +80,7 @@
 			// 
 			// numUPcola
 			// 
-			numUPcola.Location = new Point(145, 102);
+			numUPcola.Location = new Point(422, 99);
 			numUPcola.Name = "numUPcola";
 			numUPcola.Size = new Size(83, 23);
 			numUPcola.TabIndex = 3;
@@ -88,7 +90,7 @@
 			// 
 			label1.AutoSize = true;
 			label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-			label1.Location = new Point(145, 58);
+			label1.Location = new Point(422, 55);
 			label1.Name = "label1";
 			label1.Size = new Size(139, 25);
 			label1.TabIndex = 4;
@@ -97,7 +99,7 @@
 			// lbCola
 			// 
 			lbCola.AutoSize = true;
-			lbCola.Location = new Point(244, 135);
+			lbCola.Location = new Point(521, 132);
 			lbCola.Name = "lbCola";
 			lbCola.Size = new Size(10, 15);
 			lbCola.TabIndex = 4;
@@ -106,7 +108,7 @@
 			// lbMilk
 			// 
 			lbMilk.AutoSize = true;
-			lbMilk.Location = new Point(506, 135);
+			lbMilk.Location = new Point(521, 261);
 			lbMilk.Name = "lbMilk";
 			lbMilk.Size = new Size(10, 15);
 			lbMilk.TabIndex = 7;
@@ -116,7 +118,7 @@
 			// 
 			label4.AutoSize = true;
 			label4.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-			label4.Location = new Point(407, 58);
+			label4.Location = new Point(422, 184);
 			label4.Name = "label4";
 			label4.Size = new Size(150, 25);
 			label4.TabIndex = 8;
@@ -124,7 +126,7 @@
 			// 
 			// numUPmilk
 			// 
-			numUPmilk.Location = new Point(407, 102);
+			numUPmilk.Location = new Point(422, 228);
 			numUPmilk.Name = "numUPmilk";
 			numUPmilk.Size = new Size(83, 23);
 			numUPmilk.TabIndex = 6;
@@ -133,7 +135,7 @@
 			// pictureBox2
 			// 
 			pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-			pictureBox2.Location = new Point(304, 58);
+			pictureBox2.Location = new Point(319, 184);
 			pictureBox2.Name = "pictureBox2";
 			pictureBox2.Size = new Size(83, 102);
 			pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -143,7 +145,7 @@
 			// pictureBox3
 			// 
 			pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-			pictureBox3.Location = new Point(42, 194);
+			pictureBox3.Location = new Point(44, 184);
 			pictureBox3.Name = "pictureBox3";
 			pictureBox3.Size = new Size(83, 102);
 			pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -152,7 +154,7 @@
 			// 
 			// numUPcoffee
 			// 
-			numUPcoffee.Location = new Point(145, 238);
+			numUPcoffee.Location = new Point(147, 228);
 			numUPcoffee.Name = "numUPcoffee";
 			numUPcoffee.Size = new Size(83, 23);
 			numUPcoffee.TabIndex = 6;
@@ -162,7 +164,7 @@
 			// 
 			label5.AutoSize = true;
 			label5.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-			label5.Location = new Point(145, 194);
+			label5.Location = new Point(147, 184);
 			label5.Name = "label5";
 			label5.Size = new Size(139, 25);
 			label5.TabIndex = 8;
@@ -206,11 +208,29 @@
 			// 
 			columnPrice.Text = "總價";
 			// 
+			// label2
+			// 
+			label2.AutoSize = true;
+			label2.Location = new Point(53, 65);
+			label2.Name = "label2";
+			label2.Size = new Size(46, 15);
+			label2.TabIndex = 12;
+			label2.Text = "訂購人";
+			// 
+			// tbBuyer
+			// 
+			tbBuyer.Location = new Point(53, 94);
+			tbBuyer.Name = "tbBuyer";
+			tbBuyer.Size = new Size(100, 23);
+			tbBuyer.TabIndex = 13;
+			// 
 			// Form1
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(607, 532);
+			Controls.Add(tbBuyer);
+			Controls.Add(label2);
 			Controls.Add(listView1);
 			Controls.Add(textBox1);
 			Controls.Add(lbCoffee);
@@ -259,5 +279,7 @@
 		private ColumnHeader columnName;
 		private ColumnHeader columnQantity;
 		private ColumnHeader columnPrice;
+		private Label label2;
+		private TextBox tbBuyer;
 	}
 }

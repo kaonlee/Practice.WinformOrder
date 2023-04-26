@@ -37,9 +37,9 @@ namespace Practice.WinformOrder.UI
 		{
 			listView1.Items.Clear();
 			listView1.View = View.Details;
-			var milkOrder = new Order(defaultGoods.pdMilk, (int)numUPmilk.Value);
-			var colaOrder = new Order(defaultGoods.pdCola, (int)numUPcola.Value);
-			var coffeeOrder = new Order(defaultGoods.pdCoffee, (int)numUPcoffee.Value);
+			var milkOrder = new Order(defaultGoods.pdMilk, (int)numUPmilk.Value,tbBuyer.Text);
+			var colaOrder = new Order(defaultGoods.pdCola, (int)numUPcola.Value,tbBuyer.Text);
+			var coffeeOrder = new Order(defaultGoods.pdCoffee, (int)numUPcoffee.Value, tbBuyer.Text);
 
 			orderlist.Add(milkOrder);
 			orderlist.Add(colaOrder);

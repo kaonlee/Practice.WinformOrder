@@ -13,9 +13,9 @@ namespace Practice.WinformOrder.Test
         {
             Product p1 = new Product("p1", 1000);
             Product p2 = new Product("p2", 100);
-            Order order1 = new Order(p1, 2);
-            Order order2 = new Order(p2, 3);
-            Order order3 = new Order(p1, 3);
+            Order order1 = new Order(p1, 2,"tom");
+            Order order2 = new Order(p2, 3, "tom");
+            Order order3 = new Order(p1, 3, "son");
             List<Order> orderList = new List<Order> { order1, order2, order3 };
             return orderList;
         }
