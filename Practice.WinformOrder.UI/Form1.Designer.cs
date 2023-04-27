@@ -68,7 +68,7 @@
 			btnEnter.Margin =  new Padding(2) ;
 			btnEnter.Name =  "btnEnter" ;
 			btnEnter.Size =  new Size(78, 34) ;
-			btnEnter.TabIndex =  1 ;
+			btnEnter.TabIndex =  4 ;
 			btnEnter.Text =  "Enter" ;
 			btnEnter.UseVisualStyleBackColor =  true ;
 			btnEnter.Click +=  btnEnter_Click ;
@@ -88,7 +88,7 @@
 			numUPcola.Location =  new Point(147, 92) ;
 			numUPcola.Name =  "numUPcola" ;
 			numUPcola.Size =  new Size(83, 23) ;
-			numUPcola.TabIndex =  3 ;
+			numUPcola.TabIndex =  0 ;
 			numUPcola.ValueChanged +=  numUPcola_ValueChanged ;
 			// 
 			// label1
@@ -98,7 +98,7 @@
 			label1.Location =  new Point(147, 48) ;
 			label1.Name =  "label1" ;
 			label1.Size =  new Size(139, 25) ;
-			label1.TabIndex =  4 ;
+			label1.TabIndex =  1 ;
 			label1.Text =  "可樂（30元）" ;
 			// 
 			// lbCola
@@ -134,7 +134,7 @@
 			numUPmilk.Location =  new Point(147, 228) ;
 			numUPmilk.Name =  "numUPmilk" ;
 			numUPmilk.Size =  new Size(83, 23) ;
-			numUPmilk.TabIndex =  6 ;
+			numUPmilk.TabIndex =  2 ;
 			numUPmilk.ValueChanged +=  numUPmilk_ValueChanged ;
 			// 
 			// pictureBox2
@@ -162,7 +162,7 @@
 			numUPcoffee.Location =  new Point(422, 92) ;
 			numUPcoffee.Name =  "numUPcoffee" ;
 			numUPcoffee.Size =  new Size(83, 23) ;
-			numUPcoffee.TabIndex =  6 ;
+			numUPcoffee.TabIndex =  1 ;
 			numUPcoffee.ValueChanged +=  numUPcoffee_ValueChanged ;
 			// 
 			// label5
@@ -190,7 +190,7 @@
 			listView1.Location =  new Point(44, 359) ;
 			listView1.Name =  "listView1" ;
 			listView1.Size =  new Size(228, 138) ;
-			listView1.TabIndex =  11 ;
+			listView1.TabIndex =  5 ;
 			listView1.UseCompatibleStateImageBehavior =  false ;
 			// 
 			// columnName
@@ -219,15 +219,16 @@
 			tbBuyer.Location =  new Point(388, 238) ;
 			tbBuyer.Name =  "tbBuyer" ;
 			tbBuyer.Size =  new Size(100, 23) ;
-			tbBuyer.TabIndex =  13 ;
+			tbBuyer.TabIndex =  3 ;
 			// 
 			// listView2
 			// 
 			listView2.Columns.AddRange(new ColumnHeader[] { columnBuyer, columnSummary, columnEachToatal });
 			listView2.Location =  new Point(319, 359) ;
 			listView2.Name =  "listView2" ;
+			listView2.ShowItemToolTips =  true ;
 			listView2.Size =  new Size(293, 138) ;
-			listView2.TabIndex =  14 ;
+			listView2.TabIndex =  6 ;
 			listView2.UseCompatibleStateImageBehavior =  false ;
 			// 
 			// columnBuyer
@@ -250,7 +251,6 @@
 			label3.Size =  new Size(55, 15) ;
 			label3.TabIndex =  12 ;
 			label3.Text =  "價格總和" ;
-			label3.Click +=  label3_Click ;
 			// 
 			// label6
 			// 
@@ -260,13 +260,13 @@
 			label6.Size =  new Size(55, 15) ;
 			label6.TabIndex =  12 ;
 			label6.Text =  "每人明細" ;
-			label6.Click +=  label3_Click ;
 			// 
 			// Form1
 			// 
+			AcceptButton =  btnEnter ;
 			AutoScaleDimensions =  new SizeF(7F, 15F) ;
 			AutoScaleMode =  AutoScaleMode.Font ;
-			ClientSize =  new Size(847, 552) ;
+			ClientSize =  new Size(677, 535) ;
 			Controls.Add(listView2);
 			Controls.Add(tbBuyer);
 			Controls.Add(label6);

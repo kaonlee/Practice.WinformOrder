@@ -83,10 +83,5 @@ namespace Practice.WinformOrder.UI
 			numUPcola.Value = 0;
 			numUPcoffee.Value = 0;
 		}
-
-		private void label3_Click ( object sender, EventArgs e )
-		{
-
-		}
 	}
 }
